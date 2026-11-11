@@ -1,0 +1,81 @@
+.artwork {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border: 1px solid color-mix(in srgb, var(--app-accent) 29%, var(--border));
+  border-radius: 17px;
+  overflow: hidden;
+  background: #0e0d18;
+  box-shadow: 0 20px 70px #0005;
+}
+
+.top, .artwork figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 15px;
+  color: var(--muted);
+  background: #0e0d18;
+  font-size: .66rem;
+}
+
+.top {
+  font-family: monospace;
+  letter-spacing: .1em;
+  border-bottom: 1px solid var(--border);
+}
+
+.top span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--app-accent);
+  box-shadow: 0 0 12px var(--app-accent);
+}
+
+.visual {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 480 / 286;
+  background:
+    radial-gradient(ellipse at center, color-mix(in srgb, var(--app-accent) 20%, #11101d), transparent 67%),
+    linear-gradient(#c4baff10 1px, transparent 1px),
+    linear-gradient(90deg, #c4baff10 1px, transparent 1px),
+    #10101b;
+  background-size: auto, 23px 23px, 23px 23px, auto;
+  color: var(--app-accent);
+}
+
+.visual svg, .visual .centerIcon {
+  grid-area: 1 / 1;
+}
+
+.visual > svg {
+  width: 100%;
+  height: 100%;
+  opacity: .66;
+}
+
+.visual .centerIcon {
+  position: relative;
+  background: color-mix(in srgb, var(--app-accent) 19%, #0d0c17);
+  box-shadow: 0 0 32px color-mix(in srgb, var(--app-accent) 35%, transparent);
+}
+
+.artwork figcaption {
+  border-top: 1px solid var(--border);
+}
+
+.artwork figcaption span:first-child {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--foreground);
+}
